@@ -1,0 +1,152 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e9d5ff, #dbeafe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #1f2937;
+}
+
+.todo-container {
+  background: white;
+  width: 100%;
+  max-width: 550px;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  text-align: center;
+  color: #6d28d9;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+#form {
+  display: flex;
+  gap: 10px;
+}
+
+#text {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 14px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #5b21b6;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.filters button {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.filters button:hover {
+  background: #ddd6fe;
+}
+
+#list {
+  list-style: none;
+}
+
+#list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#list li span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+#list li.done span {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+#list li button {
+  padding: 8px 10px;
+}
+
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+#count {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+#clear-completed {
+  background: #dc2626;
+}
+
+#clear-completed:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 20px 15px;
+  }
+
+  #form {
+    flex-direction: column;
+  }
+
+  #text,
+  #form button {
+    width: 100%;
+  }
+
+  #list li {
+    flex-wrap: wrap;
+  }
+
+  .bottom-bar {
+    flex-direction: column;
+  }
+}
